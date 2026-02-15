@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>green</title>
+  <style>
+    body {
+      background: #ffffff;
+      font-family: 'Tahoma', sans-serif;
+      direction: rtl;
+      text-align: right;
+      margin: 0;
+      padding: 0;
+    }
+
+    .review-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .review-title {
+      text-align: center;
+      font-size: 2.3rem;
+      font-weight: bold;
+      color: #729762;
+      margin-bottom: 50px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .review-box {
+      background: #b4ea9e;
+      border: 2px solid #abc270;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s;
+    }
+
+    .review-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .review-text {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .review-reply {
+      font-size: 0.9rem;
+      color: #555;
+      background: #eef6ee;
+      border-radius: 10px;
+      padding: 12px;
+      line-height: 1.6;
+    }
+
+
+    .nav-link:hover {
+      color: #729762 !important;
+    }
+
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-left: 12px;
+    }
+
+
+    .back {
+      width: 50px;
+      height: 50px;
+      background-color: #729762;
+      border-radius: 100%;
+      position: fixed;
+      top: 2%;
+      left: 1%;
+      text-align: center;
+      padding-top: 10px;
+      color: black;
+      box-shadow: 0 5px 20px rgba(77, 134, 156, 0.4);
+      border: 3px solid black;
+      transition: all 0.3s ease;
+      font-size: 13px;
+      z-index: 1000;
+
+    }
+
+    .back:hover {
+      box-shadow: 0 8px 25px rgba(77, 134, 156, 0.5);
+      transform: translateX(3px);
+
+
+    }
+  </style>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+  <div style="background-color: #d9fad7;">
+    <header class="py-3">
+      <div class="container-fluid">
+        <a href="./index.html" class="text-decoration-none">
+          <span class="h3 mb-0 fw-bold" style="color: black;">کافه سبز</span>
+        </a></div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white align-content-end">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="./menu.html" class="nav-link">منو</a></li>
+          <li class="nav-item"><a href="./aboutUs.html" class="nav-link">درباره</a></li>
+          <li class="nav-item"><a href="./question.html" class="nav-link">سوالات متداول</a></li>
+          <li class="nav-item"><a href="./comments.html" class="nav-link">نظرات مشتريان</a></li>
+          <li class="nav-item"><a href="./popular.html" class="nav-link">پرطرفدارها</a></li>
+          <li class="nav-item"><a href="./comparison.html" class="nav-link">مقايسه نوشيدني‌ها</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+  </div>
+  </header>
+  <a href="./home.html">
+    <div class="back">برگشت</div>
+  </a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="review-section">
+    <h2 class="review-title">نظرات مشتريان</h2>
+
+    <div class="review-grid">
+
+      <div class="review-box">
+        <div class="review-text">کيفيت قهوه واقعا بالاست و طعم اصيل قهوه رو ميشه احساس کرد.</div>
+        <div class="review-reply">ممنون از توجهتون. ما هميشه از بهترين دانه‌های قهوه استفاده مي‌کنيم.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">محيط کافه خيلي آرام و مناسب برای مطالعه و کار با لپ‌تاپ بود.</div>
+        <div class="review-reply">خوشحاليم که فضای کافه براتون مفيد بوده. آرامش مشتريان اولويت ماست.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">دکوراسيون داخلي کافه بسيار جذاب و دلنشين طراحی شده است.</div>
+        <div class="review-reply">ممنون از نظرتون. طراحی فضا با هدف ايجاد حس صميميت انجام شده.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">کيک خانگي کافه بسيار تازه و خوشمزه بود.</div>
+        <div class="review-reply">بله، تمامي شيريني‌ها و کيک‌ها روزانه در کافه تهيه مي‌شوند.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">برخورد کارکنان کافه بسيار دوستانه و محترمانه بود.</div>
+        <div class="review-reply">تيم ما هميشه تلاش می‌کند بهترين تجربه را برای مشتريان فراهم کند.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">منوی نوشيدني‌ها متنوع و کامل بود.</div>
+        <div class="review-reply">خوشحاليم که مورد توجه شما قرار گرفت. منوی ما به طور منظم به‌روز مي‌شود.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">ميزها و محيط کافه بسيار تميز و مرتب بودند.</div>
+        <div class="review-reply">نظافت و بهداشت برای ما اهميت زيادی دارد. ممنون از بازخوردتان.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">موسيقي ملايم کافه فضا را بسيار دلنشين کرده بود.</div>
+        <div class="review-reply">خوشحاليم که موسيقی مورد پسندتان قرار گرفت.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">نوشيدني بيرون‌بر خيلي سريع آماده شد و بسته‌بندی شيکي داشت.</div>
+        <div class="review-reply">ممنون از توجه شما. سرعت و کيفيت در خدمات ما بسيار مهم است.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">نورپردازی کافه حس خيلي خوبي ايجاد کرده بود.</div>
+        <div class="review-reply">خوشحاليم که به جزئيات دقت کرديد. نورپردازی يکي از بخش‌های مهم طراحي ماست.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">قيمت‌ها نسبت به کيفيت محصولات بسيار منصفانه بود.</div>
+        <div class="review-reply">ممنون که اين موضوع رو مطرح کرديد. تلاش ما ارائه بهترين کيفيت با قيمت مناسب است.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">محيط کافه برای جمع‌های دوستانه فوق‌العاده‌ست.</div>
+        <div class="review-reply">خوشحاليم که در جمع دوستان لحظات خوبي داشتيد.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">دمنوش گياهي بسيار خوش‌عطر و آرامش‌بخش بود.</div>
+        <div class="review-reply">بله، دمنوش‌های ما از گياهان تازه و باکيفيت تهيه مي‌شوند.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">کافه فضای باز زيبايي داشت که خيلي لذت بردم.</div>
+        <div class="review-reply">خوشحاليم که فضای باز کافه به شما حس خوبي داده است.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">منوی انگليسي خيلي کمک کرد، چون مهمان خارجي داشتم.</div>
+        <div class="review-reply">عاليه! ما سعی می‌کنيم همه مهمانان راحت باشند.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">سرعت سرويس‌دهي بسيار عالی بود.</div>
+        <div class="review-reply">ممنون. ما هميشه تلاش مي‌کنيم مشتری منتظر نمونه.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">محيط کافه واقعا حس آرامش داشت.</div>
+        <div class="review-reply">هدف اصلي ما ايجاد همين حس آرامش برای مشتريان است.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">قهوه اسپرسو خيلي حرفه‌ای و خوش‌طعم بود.</div>
+        <div class="review-reply">ممنون از نظرتون. تهيه اسپرسوی حرفه‌ای يکی از تخصص‌های ماست.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">امکان استفاده از اينترنت خيلي به کارم اومد.</div>
+        <div class="review-reply">خوشحاليم که براتون مفيد بوده. اينترنت رايگان هميشه در دسترس است.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">طراحي منو خيلي خلاقانه و جذاب بود.</div>
+        <div class="review-reply">سپاسگزاريم. روی طراحی منو زمان زيادی صرف کرديم.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">حس صميميت در کافه واقعا لذت‌بخش بود.</div>
+        <div class="review-reply">خوشحاليم که چنين حسی دريافت کرديد. اين دقيقا هدف ماست.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">بسته‌بندی نوشيدني بيرون‌بر خيلي حرفه‌ای بود.</div>
+        <div class="review-reply">ممنون. طراحي بسته‌بندی برای ما اهميت زيادی دارد.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">پرسنل خيلي خوش‌برخورد بودن.</div>
+        <div class="review-reply">ممنون از محبتتون. احترام به مشتری يکي از اصول ماست.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">نور طبيعي زيادی داشت که حس خوبي ايجاد مي‌کرد.</div>
+        <div class="review-reply">بله، ما هميشه تلاش مي‌کنيم فضا روشن و دل‌باز باشه.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">ميزها خيلي راحت و مناسب بودن.</div>
+        <div class="review-reply">خوشحاليم که راضي بوديد. راحتي مشتری برای ما مهمه.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">واقعا بهترين تجربه کافه‌ای من بود.</div>
+        <div class="review-reply">چه عالي! اين نظر برای ما ارزشمندترين هديه است.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">قيمت دمنوش‌ها خيلي مناسب بود.</div>
+        <div class="review-reply">خوشحاليم که اين موضوع براتون رضايت‌بخش بوده.</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-text">کيک و شيريني‌ها واقعا تازه بودن.</div>
+        <div class="review-reply">بله، همه شيريني‌ها در همان روز تهيه مي‌شوند.</div>
+      </div>
+
+    </div>
+  </div>
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

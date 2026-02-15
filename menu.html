@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>green</title>
+  <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #d9fad7;
+      font-family: 'Arial', sans-serif;
+      color: #c6d57e;
+    }
+
+    h1 {
+      text-align: center;
+      color: #729762;
+      margin: 30px 0;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-card {
+      background: #121212;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px black;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 20px #79ab63;
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: 3px solid #729762;
+    }
+
+    .menu-card-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .menu-card-body h5 {
+      color: #abc270;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .menu-card-body p {
+      color: #c6d57e;
+      font-size: 14px;
+    }
+
+    .nav-link:hover {
+      color: #729762 !important;
+    }
+
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-left: 12px;
+    }
+
+
+    .back {
+      width: 50px;
+      height: 50px;
+      background-color: #729762;
+      border-radius: 100%;
+      position: fixed;
+      top: 2%;
+      left: 1%;
+      text-align: center;
+      padding-top: 10px;
+      color: black;
+      box-shadow: 0 5px 20px rgba(77, 134, 156, 0.4);
+      border: 3px solid black;
+      transition: all 0.3s ease;
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    .back:hover {
+      box-shadow: 0 8px 25px rgba(77, 134, 156, 0.5);
+      transform: translateX(3px);
+
+
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="background-color: #d9fad7;">
+    <!-- Header -->
+    <header class="py-3">
+      <div class="container-fluid">
+        <a href="./index.html" class="text-decoration-none">
+          <span class="h3 mb-0 fw-bold" style="color: black;">کافه سبز</span>
+        </a></div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white align-content-end">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="./menu.html" class="nav-link">منو</a></li>
+          <li class="nav-item"><a href="./aboutUs.html" class="nav-link">درباره</a></li>
+          <li class="nav-item"><a href="./question.html" class="nav-link">سوالات متداول</a></li>
+          <li class="nav-item"><a href="./comments.html" class="nav-link">نظرات مشتريان</a></li>
+          <li class="nav-item"><a href="./popular.html" class="nav-link">پرطرفدارها</a></li>
+          <li class="nav-item"><a href="./comparison.html" class="nav-link">مقايسه نوشيدني‌ها</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <a href="./home.html">
+    <div class="back">برگشت</div>
+  </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <h1>منوی کافه</h1>
+
+    <div class=" text-white" style="text-align: center;">
+      <h2 style="padding: 10px 10px; color: black;">قهوه‌های داغ</h2>
+
+      <div class="menu-grid">
+        <!-- کارت 1 -->
+        <div class="menu-card">
+          <img src="./menu/coffee1.jpeg" alt="اسپرسو تک">
+          <div class="menu-card-body">
+            <h5>اسپرسو تک</h5>
+            <p>قهوه‌ای قوی و خوش‌عطر</p>
+          </div>
+        </div>
+
+        <!-- کارت 2 -->
+        <div class="menu-card">
+          <img src="./menu/coffee2.jpeg" alt="اسپرسو دوبل">
+          <div class="menu-card-body">
+            <h5>اسپرسو دوبل</h5>
+            <p>دو برابر قدرت و انرژی</p>
+          </div>
+        </div>
+
+        <!-- کارت 3 -->
+        <div class="menu-card">
+          <img src="./menu/coffee3.jpeg" alt="آمريکانو">
+          <div class="menu-card-body">
+            <h5>آمريکانو</h5>
+            <p>اسپرسو با آب داغ، سبک و خوش‌طعم</p>
+          </div>
+        </div>
+
+        <!-- کارت 4 -->
+        <div class="menu-card">
+          <img src="./menu/coffee4.jpeg" alt="لاته کلاسيک">
+          <div class="menu-card-body">
+            <h5>لاته کلاسيک</h5>
+            <p>ترکيب شير و اسپرسو برای طعم ملايم</p>
+          </div>
+        </div>
+
+        <!-- کارت 5 -->
+        <div class="menu-card">
+          <img src="./menu/coffee5.jpeg" alt="کاپوچينو">
+          <div class="menu-card-body">
+            <h5>کاپوچينو</h5>
+            <p>کف شير غليظ روی قهوه داغ</p>
+          </div>
+        </div>
+
+        <!-- کارت 6 -->
+        <div class="menu-card">
+          <img src="./menu/coffee6.jpeg" alt="موکا">
+          <div class="menu-card-body">
+            <h5>موکا</h5>
+            <p>قهوه با شکلات داغ، شيرين و خوشمزه</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee7.jpeg" alt="ماکياتو">
+          <div class="menu-card-body">
+            <h5>ماکياتو</h5>
+            <p>اسپرسو با کمي شير کف کرده</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee8.jpeg" alt="ريسترتو">
+          <div class="menu-card-body">
+            <h5>ريسترتو</h5>
+            <p>قهوه کوتاه و غليظ با طعم شديد</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee9.jpeg" alt="فلت وايت">
+          <div class="menu-card-body">
+            <h5>فلت وايت</h5>
+            <p>قهوه استراليايي با شير نرم</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee10.jpeg" alt="لاته وانيلي">
+          <div class="menu-card-body">
+            <h5>لاته وانيلي</h5>
+            <p>لاته کلاسيک با طعم وانيل</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class=" text-white" style="text-align: center;">
+      <h2 style="padding: 10px 10px;color: black;">چای و دمنوش‌ها</h2>
+
+      <div class="menu-grid">
+        <!-- کارت 1 -->
+        <div class="menu-card">
+          <img src="./menu/coffee11.jpeg" alt="چای سياه کلاسيک">
+          <div class="menu-card-body">
+            <h5>چای سياه کلاسيک</h5>
+            <p>چای خوش‌طعم و سنتي</p>
+          </div>
+        </div>
+
+        <!-- کارت 2 -->
+        <div class="menu-card">
+          <img src="./menu/coffee12.jpeg" alt="چای سبز">
+          <div class="menu-card-body">
+            <h5>چای سبز</h5>
+            <p>دمنوش سالم و آرامش‌بخش</p>
+          </div>
+        </div>
+
+        <!-- کارت 3 -->
+        <div class="menu-card">
+          <img src="./menu/coffee13.jpeg" alt="چای ماسالا هندی">
+          <div class="menu-card-body">
+            <h5>چای ماسالا هندی</h5>
+            <p>چای پرادويه و خوش‌طعم</p>
+          </div>
+        </div>
+
+        <!-- کارت 4 -->
+        <div class="menu-card">
+          <img src="./menu/coffee14.jpeg" alt="چای ترش">
+          <div class="menu-card-body">
+            <h5>چای ترش</h5>
+            <p>نوشيدني خنک و ترش‌مزه</p>
+          </div>
+        </div>
+
+        <!-- کارت 5 -->
+        <div class="menu-card">
+          <img src="./menu/coffee15.jpeg" alt="چای نعناع">
+          <div class="menu-card-body">
+            <h5>چای نعناع</h5>
+            <p>نوشيدني آرامش‌بخش و خنک</p>
+          </div>
+        </div>
+
+        <!-- کارت 6 -->
+        <div class="menu-card">
+          <img src="./menu/coffee16.jpeg" alt="دمنوش بابونه">
+          <div class="menu-card-body">
+            <h5>دمنوش بابونه</h5>
+            <p>نوشيدني آرامش‌بخش و ملايم</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee17.jpeg" alt="دمنوش گل گاوزبان">
+          <div class="menu-card-body">
+            <h5>دمنوش گل گاوزبان</h5>
+            <p>عطر طبيعي و آرامش‌بخش</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee18.jpeg" alt="دمنوش آويشن و عسل">
+          <div class="menu-card-body">
+            <h5>دمنوش آويشن و عسل</h5>
+            <p>طعم گرم و خوش‌عطر</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee19.jpeg" alt="چای اولانگ">
+          <div class="menu-card-body">
+            <h5>چای اولانگ</h5>
+            <p>چای نيمه تخمير شده با طعم ملايم</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee20.jpeg" alt="چای ياس">
+          <div class="menu-card-body">
+            <h5>چای ياس</h5>
+            <p>چای خوش‌عطر و آرامش‌بخش</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class=" text-white" style="text-align: center;">
+      <h2 style="padding: 10px 10px;color: black;">قهوه‌های سرد</h2>
+
+      <div class="menu-grid">
+        <!-- کارت 1 -->
+        <div class="menu-card">
+          <img src="./menu/coffee21.jpeg" alt="آيس لاته">
+          <div class="menu-card-body">
+            <h5>آيس لاته</h5>
+            <p>لاته سرد با يخ</p>
+          </div>
+        </div>
+
+        <!-- کارت 2 -->
+        <div class="menu-card">
+          <img src="./menu/coffee22.jpeg" alt="آيس موکا">
+          <div class="menu-card-body">
+            <h5>آيس موکا</h5>
+            <p>موکا سرد و خوشمزه</p>
+          </div>
+        </div>
+
+        <!-- کارت 3 -->
+        <div class="menu-card">
+          <img src="./menu/coffee23.jpeg" alt="آيس آمريکانو">
+          <div class="menu-card-body">
+            <h5>آيس آمريکانو</h5>
+            <p>آمريکانو با يخ، خنک و سبک</p>
+          </div>
+        </div>
+
+        <!-- کارت 4 -->
+        <div class="menu-card">
+          <img src="./menu/coffee24.jpeg" alt="آيس کارامل ماکياتو">
+          <div class="menu-card-body">
+            <h5>آيس کارامل ماکياتو</h5>
+            <p>با شربت کارامل شيرين</p>
+          </div>
+        </div>
+
+        <!-- کارت 5 -->
+        <div class="menu-card">
+          <img src="./menu/coffee25.jpeg" alt="آيس وانيل لاته">
+          <div class="menu-card-body">
+            <h5>آيس وانيل لاته</h5>
+            <p>طعم وانيل سرد و خوش‌عطر</p>
+          </div>
+        </div>
+
+        <!-- کارت 6 -->
+        <div class="menu-card">
+          <img src="./menu/coffee26.jpeg" alt="آيس هات‌ چاکلت">
+          <div class="menu-card-body">
+            <h5>آيس هات‌ چاکلت</h5>
+            <p>شکلات داغ سرد و خامه‌ای</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee27.jpeg" alt="آيس چای سبز">
+          <div class="menu-card-body">
+            <h5>آيس چای سبز</h5>
+            <p>چای سبز با يخ، طعم تازه</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee28.jpeg" alt="آيس چای ترش">
+          <div class="menu-card-body">
+            <h5>آيس چای ترش</h5>
+            <p>نوشيدني ترش و خنک</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee29.jpeg" alt="آيس چای ماسالا">
+          <div class="menu-card-body">
+            <h5>آيس چای ماسالا</h5>
+            <p>ماسالا با يخ و طعم قوی</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee30.jpeg" alt="آيس موکا توت‌فرنگي">
+          <div class="menu-card-body">
+            <h5>آيس موکا توت‌فرنگي</h5>
+            <p>ترکيب شکلات و توت‌فرنگي</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class=" text-white" style="text-align: center;">
+      <h2 style="padding: 10px 10px;color: black;">نوشيدني‌های ميوه‌ای و شيک</h2>
+
+      <div class="menu-grid">
+        <!-- کارت 1 -->
+        <div class="menu-card">
+          <img src="./menu/coffee31.jpeg" alt="اسموتي موز و توت‌فرنگي">
+          <div class="menu-card-body">
+            <h5>اسموتي موز و توت‌فرنگي</h5>
+            <p>نرم و خوش‌طعم</p>
+          </div>
+        </div>
+
+        <!-- کارت 2 -->
+        <div class="menu-card">
+          <img src="./menu/coffee32.jpeg" alt="اسموتي انبه">
+          <div class="menu-card-body">
+            <h5>اسموتي انبه</h5>
+            <p>شيرين و خنک</p>
+          </div>
+        </div>
+
+        <!-- کارت 3 -->
+        <div class="menu-card">
+          <img src="./menu/coffee33.jpeg" alt="اسموتي هلو و زردآلو">
+          <div class="menu-card-body">
+            <h5>اسموتي هلو و زردآلو</h5>
+            <p>طعم تابستاني و ملايم</p>
+          </div>
+        </div>
+
+        <!-- کارت 4 -->
+        <div class="menu-card">
+          <img src="./menu/coffee34.jpeg" alt="ليموناد کلاسيک">
+          <div class="menu-card-body">
+            <h5>ليموناد کلاسيک</h5>
+            <p>ترش و خنک</p>
+          </div>
+        </div>
+
+        <!-- کارت 5 -->
+        <div class="menu-card">
+          <img src="./menu/coffee35.jpeg" alt="ليموناد نعناع">
+          <div class="menu-card-body">
+            <h5>ليموناد نعناع</h5>
+            <p>طعم تازه و دلنشين</p>
+          </div>
+        </div>
+
+        <!-- کارت 6 -->
+        <div class="menu-card">
+          <img src="./menu/coffee36.jpeg" alt="موهيتو بدون الکل">
+          <div class="menu-card-body">
+            <h5>موهيتو بدون الکل</h5>
+            <p>تازه و خنک</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee37.jpeg" alt="شيک شکلات">
+          <div class="menu-card-body">
+            <h5>شيک شکلات</h5>
+            <p>غني و شيرين</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee38.jpeg" alt="شيک وانيل">
+          <div class="menu-card-body">
+            <h5>شيک وانيل</h5>
+            <p>طعم نرم و کلاسيک</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee39.jpeg" alt="شيک کارامل">
+          <div class="menu-card-body">
+            <h5>شيک کارامل</h5>
+            <p>شيرين و دلچسب</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee40.jpeg" alt="آبميوه طبيعي مخلوط">
+          <div class="menu-card-body">
+            <h5>آبميوه طبيعي مخلوط</h5>
+            <p>سالم و خنک</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class=" text-white" style="text-align: center;">
+      <h2 style="padding: 10px 10px;color: black;">دسرها و شيريني‌ها</h2>
+
+      <div class="menu-grid">
+        <!-- کارت 1 -->
+        <div class="menu-card">
+          <img src="./menu/coffee41.jpeg" alt="کيک شکلاتي">
+          <div class="menu-card-body">
+            <h5>کيک شکلاتي</h5>
+            <p>شکلاتي و خوش‌طعم</p>
+          </div>
+        </div>
+
+        <!-- کارت 2 -->
+        <div class="menu-card">
+          <img src="./menu/coffee42.jpeg" alt="کيک کارامل">
+          <div class="menu-card-body">
+            <h5>کيک کارامل</h5>
+            <p>شيرين و لطيف</p>
+          </div>
+        </div>
+
+        <!-- کارت 3 -->
+        <div class="menu-card">
+          <img src="./menu/coffee43.jpeg" alt="چيزکيک کلاسيک">
+          <div class="menu-card-body">
+            <h5>چيزکيک کلاسيک</h5>
+            <p>کرمي و سبک</p>
+          </div>
+        </div>
+
+        <!-- کارت 4 -->
+        <div class="menu-card">
+          <img src="./menu/coffee44.jpeg" alt="تيراميسو">
+          <div class="menu-card-body">
+            <h5>تيراميسو</h5>
+            <p>خوشمزه و لطيف</p>
+          </div>
+        </div>
+
+        <!-- کارت 5 -->
+        <div class="menu-card">
+          <img src="./menu/coffee45.jpeg" alt="ماکارون">
+          <div class="menu-card-body">
+            <h5>ماکارون</h5>
+            <p>رنگارنگ و خوش‌عطر</p>
+          </div>
+        </div>
+
+        <!-- کارت 6 -->
+        <div class="menu-card">
+          <img src="./menu/coffee46.jpeg" alt="کروسان شکلاتي">
+          <div class="menu-card-body">
+            <h5>کروسان شکلاتي</h5>
+            <p>نرم و شکلاتي</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee47.jpeg" alt="کروسان بادام">
+          <div class="menu-card-body">
+            <h5>کروسان بادام</h5>
+            <p>طعم بادام و کرم شيرين</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee48.jpeg" alt="براوني شکلاتي">
+          <div class="menu-card-body">
+            <h5>براوني شکلاتي</h5>
+            <p>شکلاتي و مرطوب</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee49.jpeg" alt="موس توت‌فرنگي">
+          <div class="menu-card-body">
+            <h5>موس توت‌فرنگي</h5>
+            <p>سبک و خنک</p>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./menu/coffee50.jpeg" alt="وافل با بستني">
+          <div class="menu-card-body">
+            <h5>وافل با بستني</h5>
+            <p>ترکيب شيريني و سردی</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

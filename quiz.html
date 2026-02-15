@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+
+  <title>green</title>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #d9fad7;
+      color: black;
+      font-family: "Tahoma", sans-serif;
+      padding: 20px;
+    }
+
+    .quiz-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 280px;
+      display: inline-block;
+      margin: 6px;
+    }
+
+    .options li {
+      margin: 8px 0;
+      background: #b6eaa0;
+      padding: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .answer-box {
+      margin-top: 10px;
+      padding: 8px;
+      background: black;
+      color: white;
+      border-radius: 8px;
+      width: 120px;
+      text-align: center;
+      position: relative;
+    }
+
+    .answer-box span {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s;
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: #abc270;
+      color: black;
+      padding: 5px;
+      border-radius: 8px;
+      width: max-content;
+    }
+
+    .answer-box:hover span {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    .nav-link:hover {
+      color: #729762 !important;
+    }
+
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-left: 12px;
+    }
+
+
+    .back {
+      width: 50px;
+      height: 50px;
+      background-color: #729762;
+      border-radius: 100%;
+      position: fixed;
+      top: 2%;
+      left: 1%;
+      text-align: center;
+      padding-top: 10px;
+      color: black;
+      box-shadow: 0 5px 20px rgba(77, 134, 156, 0.4);
+      border: 3px solid black;
+      transition: all 0.3s ease;
+      font-size: 13px;
+      z-index: 3000;
+
+    }
+
+    .back:hover {
+      box-shadow: 0 8px 25px rgba(77, 134, 156, 0.5);
+      transform: translateX(3px);
+
+
+    }
+
+    .quiz-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .quiz-card {
+      margin: 10px;
+    }
+
+    @media (max-width: 992px) {
+      .quiz-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .quiz-card {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .answer-box {
+        width: 90px;
+        font-size: 0.85rem;
+      }
+
+      .options li {
+        font-size: 0.85rem;
+        padding: 6px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .back {
+        width: 40px;
+        height: 40px;
+        padding-top: 8px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="py-3">
+    <div class="container-fluid">
+      <a href="./index.html" class="text-decoration-none">
+        <span class="h3 mb-0 fw-bold" style="color: black;">کافه سبز</span>
+      </a>
+    </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white align-content-end">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="./menu.html" class="nav-link text-dark">منو</a></li>
+            <li class="nav-item"><a href="./aboutUs.html" class="nav-link text-dark">درباره</a></li>
+            <li class="nav-item"><a href="./question.html" class="nav-link text-dark">سوالات متداول</a></li>
+            <li class="nav-item"><a href="./comments.html" class="nav-link text-dark">نظرات مشتريان</a></li>
+            <li class="nav-item"><a href="./popular.html" class="nav-link text-dark">پرطرفدارها</a></li>
+            <li class="nav-item"><a href="./comparison.html" class="nav-link text-dark">مقايسه نوشيدني‌ها</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+    </div>
+  </header>
+  <a href="./home.html">
+    <div class="back">برگشت</div>
+  </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h1 class="text-center mb-4">کوییز قهوه</h1>
+  <div class="quiz-container">
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>1. قهوه عربیکا در کدام منطقه بیشتر کشت می‌شود؟</strong></p>
+      <ul class="options">
+        <li>آسیا</li>
+        <li>آفریقا</li>
+        <li>آمریکای جنوبی</li>
+        <li>اروپا</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>آمریکای جنوبی</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>2. کافئین در بدن به طور متوسط چند ساعت اثر دارد؟</strong></p>
+      <ul class="options">
+        <li>۲ ساعت</li>
+        <li>۴-۶ ساعت</li>
+        <li>۸ ساعت</li>
+        <li>۱۲ ساعت</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>۴-۶ ساعت</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>3. نام دستگاه سنتی تهیه قهوه ترک چیست؟</strong></p>
+      <ul class="options">
+        <li>موکاپات</li>
+        <li>قهوه‌جوش (جزوه)</li>
+        <li>فرنچ‌پرس</li>
+        <li>اسپرسوساز</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>قهوه‌جوش (جزوه)</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>4. اسپرسو در چه حجمی سرو می‌شود؟</strong></p>
+      <ul class="options">
+        <li>۳۰ میلی‌لیتر</li>
+        <li>۱۰۰ میلی‌لیتر</li>
+        <li>۲۵۰ میلی‌لیتر</li>
+        <li>۵۰۰ میلی‌لیتر</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>۳۰ میلی‌لیتر</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>5. بهترین دمای آب برای دم‌آوری قهوه چند درجه است؟</strong></p>
+      <ul class="options">
+        <li>۶۰ درجه</li>
+        <li>۷۵ درجه</li>
+        <li>۹۰-۹۶ درجه</li>
+        <li>۱۰۰ درجه</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>۹۰-۹۶ درجه</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>6. کدام نوع از قهوه‌های زير تلخ‌ترين است؟</strong></p>
+      <ul class="options">
+        <li>عربيکا</li>
+        <li>روبوستا</li>
+        <li>ليبريکا</li>
+        <li>اکسلسا</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>روبوستا</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>7.نام فرايند خشک کردن دانه قهوه روی زمين چيست؟</strong></p>
+      <ul class="options">
+        <li>شسته</li>
+        <li>خشک طبيعي</li>
+        <li>نيمه‌شسته</li>
+        <li>آفتابي</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>خشک طبيعي</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>8.کدام قهوه معمولا اسيديته بالاتری دارد؟</strong></p>
+      <ul class="options">
+        <li>عربيکا</li>
+        <li>روبوستا</li>
+        <li>ليبريکا</li>
+        <li>اکسلسا</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>عربيکا</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>9. کدام گزينه تعريف دقيق "کرما" در اسپرسو است؟</strong></p>
+      <ul class="options">
+        <li>کف شير</li>
+        <li>لايه خامه‌ای روی قهوه</li>
+        <li>تلخي قهوه</li>
+        <li>دانه قهوه آسياب شده</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>لايه خامه‌ای روی قهوه</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>10.قهوه موکا ترکيبي از چيست؟</strong></p>
+      <ul class="options">
+        <li>قهوه + شکلات</li>
+        <li>قهوه + شير</li>
+        <li>قهوه + عسل</li>
+        <li>قهوه + وانيل</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>قهوه + شکلات</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>11.کدام روش دم‌آوری، طعم خالص‌تری از قهوه مي‌دهد؟</strong></p>
+      <ul class="options">
+        <li>فرنچ‌پرس</li>
+        <li>اسپرسو</li>
+        <li>موکاپات</li>
+        <li>ترک</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>فرنچ‌پرس</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>12.چه چيزی باعث تلخي بيش از حد قهوه مي‌شود؟</strong></p>
+      <ul class="options">
+        <li>دمای پايين</li>
+        <li>آسياب درشت</li>
+        <li>دم‌آوری طولاني</li>
+        <li>شير اضافه</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>دم‌آوری طولاني</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>13.دانه قهوه تازه چگونه تشخيص داده مي‌شود؟</strong></p>
+      <ul class="options">
+        <li>رنگ قهوه روشن</li>
+        <li>عطر قوی</li>
+        <li>خشک بودن زياد</li>
+        <li>شکستگي</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>عطر قوی</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>14.قهوه روبوستا معمولا چه ويژگي دارد؟</strong></p>
+      <ul class="options">
+        <li>کافئين کمتر</li>
+        <li>تلخ‌تر</li>
+        <li>نرم</li>
+        <li>شيرين</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>تلخ‌تر</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>15.بهترين نوع آسياب برای اسپرسو چيست؟</strong></p>
+      <ul class="options">
+        <li>خيلي ريز</li>
+        <li>متوسط</li>
+        <li>درشت</li>
+        <li>خيلي درشت</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>خيلي ريز</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>16.کدام فنجان برای سرو قهوه ترک مناسب است؟</strong></p>
+      <ul class="options">
+        <li>بلند</li>
+        <li>کوتاه و پهن</li>
+        <li>شيشه‌ای</li>
+        <li>پلاستيکي</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>کوتاه و پهن</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>17.اصطلاح"Crema" در اسپرسو به چه معناست؟</strong></p>
+      <ul class="options">
+        <li>کف شير</li>
+        <li>لايه طلايي روی قهوه</li>
+        <li>تلخي زياد</li>
+        <li>دانه آسياب‌شده</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>لايه طلايي روی قهوه</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px; padding-top: 41px;">
+      <p><strong>18.قهوه لاته چيست؟</strong></p>
+      <ul class="options">
+        <li>اسپرسو + شير</li>
+        <li>قهوه تلخ</li>
+        <li>قهوه + شکلات</li>
+        <li>قهوه + عسل</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>اسپرسو + شير</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>19.بهترين روش نگهداری دانه قهوه چيست؟</strong></p>
+      <ul class="options">
+        <li>داخل يخچال</li>
+        <li>در بسته و خشک</li>
+        <li>در معرض هوا</li>
+        <li>در شيشه شفاف</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>در بسته و خشک</span>
+      </div>
+    </div>
+
+    <div class="quiz-card" style="margin-bottom: 50px;">
+      <p><strong>20.چه عاملي باعث طعم ميوه‌ای در قهوه مي‌شود؟</strong></p>
+      <ul class="options">
+        <li>نوع خاک</li>
+        <li>دمای دم‌آوری</li>
+        <li>ميزان کافئين</li>
+        <li>ترکيب شير</li>
+      </ul>
+      <div class="answer-box">جواب
+        <span>نوع خاک</span>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

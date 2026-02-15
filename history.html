@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>green</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            color: #000000;
+            line-height: 1.8;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #abc270 0%, #79ac78 100%);
+            padding: 80px 0;
+            margin-bottom: 60px;
+            border-radius: 0 0 50px 50px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: white;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(114, 151, 98, 0.1);
+            border-right: 6px solid #729762;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(114, 151, 98, 0.2);
+        }
+
+        .timeline-item:nth-child(even) {
+            border-right: none;
+            border-left: 6px solid #79ac78;
+        }
+
+        .timeline-date {
+            background: linear-gradient(45deg, #729762, #79ac78);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(114, 151, 98, 0.3);
+        }
+
+        .timeline-title {
+            color: #729762;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .timeline-content {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.9;
+        }
+
+        .coffee-icon {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: #abc270;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(171, 194, 112, 0.4);
+        }
+
+        .timeline-item:nth-child(even) .coffee-icon {
+            right: auto;
+            left: -15px;
+            background: #79ac78;
+        }
+
+        .section-divider {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .divider-line {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #729762, #abc270, #79ac78, transparent);
+            border: none;
+            margin: 20px 0;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .timeline-item {
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+
+            .timeline-title {
+                font-size: 1.5rem;
+            }
+
+            .timeline-content {
+                font-size: 1rem;
+            }
+        }
+
+
+        .nav-link:hover {
+            color: #729762 !important;
+        }
+
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-left: 12px;
+        }
+
+
+        .back {
+            width: 50px;
+            height: 50px;
+            background-color: #729762;
+            border-radius: 100%;
+            position: fixed;
+            top: 2%;
+            left: 1%;
+            text-align: center;
+            padding-top: 10px;
+            color: black;
+            box-shadow: 0 5px 20px rgba(77, 134, 156, 0.4);
+            border: 3px solid black;
+            transition: all 0.3s ease;
+            font-size: 15px;
+            z-index: 1000;
+
+        }
+
+        .back:hover {
+            box-shadow: 0 8px 25px rgba(77, 134, 156, 0.5);
+            transform: translateX(3px);
+
+
+        }
+    </style>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+    <div style=" background: linear-gradient(135deg, #abc270 0%, #79ac78 100%);">
+        <header class="py-3">
+            <div class="container-fluid">
+                <a href="./index.html" class="text-decoration-none">
+                    <span class="h3 mb-0 fw-bold" style="color: black;">کافه سبز</span>
+                </a></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white align-content-end">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="./menu.html" class="nav-link text-dark">منو</a></li>
+                    <li class="nav-item"><a href="./aboutUs.html" class="nav-link text-dark">درباره</a></li>
+                    <li class="nav-item"><a href="./question.html" class="nav-link text-dark">سوالات متداول</a></li>
+                    <li class="nav-item"><a href="./comments.html" class="nav-link text-dark">نظرات مشتريان</a></li>
+                    <li class="nav-item"><a href="./popular.html" class="nav-link text-dark">پرطرفدارها</a></li>
+                    <li class="nav-item"><a href="./comparison.html" class="nav-link text-dark">مقايسه نوشيدني‌ها</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    </div>
+    </header>
+    </div>
+    <a href="./home.html">
+        <div class="back">برگشت</div>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title">تاريخچه قهوه</h1>
+            <p class="hero-subtitle">سفری در زمان با عطر و طعم قهوه</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="coffee-icon">🌳</div>
+                <div class="timeline-date">قرن ۹ ميلادی</div>
+                <h3 class="timeline-title">کشف اسطوره‌ای قهوه</h3>
+                <p class="timeline-content">
+                    داستان قهوه از اتيوپي آغاز مي‌شود. کالدی، چوپان جواني، متوجه شد که بزهايش پس از خوردن ميوه‌های قرمز
+                    درختي خاص، بسيار سرحال و پرانرژی مي‌شوند. اين کشف تصادفي، آغاز يکي از محبوب‌ترين نوشيدني‌های جهان
+                    بود.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="coffee-icon">🌅</div>
+                <div class="timeline-date">قرن ۱۵ ميلادی</div>
+                <h3 class="timeline-title">ورود به جهان اسلام</h3>
+                <p class="timeline-content">
+                    قهوه از اتيوپي به يمن سفر کرد و در شهر مکه مورد استقبال قرار گرفت. صوفيان از آن برای بيدار ماندن در
+                    طول عبادت‌های شبانه استفاده مي‌کردند. اولين قهوه‌خانه‌ها در مکه و استانبول تأسيس شدند.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="coffee-icon">🏙</div>
+                <div class="timeline-date">قرن ۱۷ ميلادی</div>
+                <h3 class="timeline-title">فتح اروپا</h3>
+                <p class="timeline-content">
+                    تجار ونيزی قهوه را به اروپا آوردند. ابتدا برخي آن را "نوشيدني شيطان" مي‌ناميدند، اما پاپ کلمنت هشتم
+                    آن را تبرک کرد. قهوه‌خانه‌های لندن به "دانشگاه‌های يک پني" معروف شدند، جايي که مردان برای بحث و
+                    تبادل نظر جمع مي‌شدند.
+                </p>
+            </div>
+
+            <div class="section-divider">
+                <hr class="divider-line">
+                <h4 style="color: var(--primary-green); font-weight: 600;">گسترش در سراسر جهان</h4>
+                <hr class="divider-line">
+            </div>
+
+            <div class="timeline-item">
+                <div class="coffee-icon" style="padding-top: 9px;">🍺</div>
+                <div class="timeline-date">قرن ۱۸ ميلادی</div>
+                <h3 class="timeline-title">عصر مستعمرات</h3>
+                <p class="timeline-content">
+                    اروپايي‌ها کاشت قهوه را به مستعمرات خود در آمريکای جنوبي، آسيا و اقيانوسيه گسترش دادند. برزيل به
+                    بزرگ‌ترين توليدکننده قهوه جهان تبديل شد. در اين دوران، قهوه از کالای لوکس به نوشيدني عمومي تبديل شد.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="coffee-icon">⚙️</div>
+                <div class="timeline-date">قرن ۱۹ ميلادی</div>
+                <h3 class="timeline-title">انقلاب صنعتي قهوه</h3>
+                <p class="timeline-content">
+                    اختراع ماشين اسپرسو در ايتاليا، قهوه فوری، و روش‌های جديد بسته‌بندی، قهوه را به محصولي انبوه تبديل
+                    کرد. برندهای بزرگ مانند فولگرز و ماکسول هاوس متولد شدند و قهوه وارد خانه‌های مردم عادی شد.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="coffee-icon">☕</div>
+                <div class="timeline-date">قرن ۲۰ ميلادی</div>
+                <h3 class="timeline-title">عصر طلايي قهوه‌خانه‌ها</h3>
+                <p class="timeline-content">
+                    استارباکس در سال ۱۹۷۱ تأسيس شد و مفهوم "موج سوم قهوه" را معرفي کرد. قهوه از يک نوشيدني ساده به
+                    تجربه‌ای فرهنگي و اجتماعي تبديل شد. کيفيت، منشأ و روش تهيه اهميت پيدا کردند.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="coffee-icon">🌍</div>
+                <div class="timeline-date">امروز</div>
+                <h3 class="timeline-title">قهوه در عصر مدرن</h3>
+                <p class="timeline-content">
+                    امروزه قهوه دومين کالای تجاری جهان پس از نفت محسوب مي‌شود. از قهوه‌های تخصصي گرفته تا کپسول‌های
+                    نسپرسو، از کافه‌های محلي تا زنجيره‌های بين‌المللي، قهوه بخشي جدايي‌ناپذير از زندگي روزمره ميلياردها
+                    نفر در سراسر جهان است.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 60px;"></div>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

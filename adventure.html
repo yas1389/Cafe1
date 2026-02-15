@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>green</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+
+        body {
+            background: linear-gradient(135deg, #abc270 0%, #729762 100%);
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+                linear-gradient(135deg, 0%, #729762 100%);
+            color: white;
+            padding: 120px 0 80px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-top: 6px solid #729762;
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-title {
+            color: black;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #abc270;
+            border-radius: 2px;
+        }
+
+        .drink-item {
+            background: linear-gradient(135deg, #abc270, #729762);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            color: white;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .drink-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .drink-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .drink-ingredients {
+            font-size: 1rem;
+            opacity: 0.95;
+            line-height: 1.7;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 4px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .category-icon {
+            font-size: 4rem;
+            color: #729762;
+            margin-bottom: 25px;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.95) !important;
+            backdrop-filter: blur(15px);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: #abc270 !important;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 10px 20px !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #abc270 !important;
+            background: rgba(171, 194, 112, 0.1);
+        }
+
+        .hero-icons {
+            margin-top: 50px;
+        }
+
+        .hero-icon-item {
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-icon-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-icon-item i {
+            font-size: 3.5rem;
+            color: #abc270;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-icon-item p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        footer {
+            background: black !important;
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .section-spacing {
+            padding: 60px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .category-card {
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+
+            .category-title {
+                font-size: 2rem;
+            }
+
+            .drink-item {
+                padding: 20px;
+            }
+
+            .drink-name {
+                font-size: 1.2rem;
+            }
+
+            .hero-icon-item i {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 100px 0 60px 0;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .category-card {
+                padding: 20px;
+            }
+
+            .drink-item {
+                padding: 15px;
+            }
+        }
+
+        .nav-link:hover {
+            color: #729762 !important;
+        }
+
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-left: 12px;
+        }
+
+
+        .back {
+            width: 50px;
+            height: 50px;
+            background-color: #729762;
+            border-radius: 100%;
+            position: fixed;
+            top: 2%;
+            left: 1%;
+            text-align: center;
+            padding-top: 10px;
+            color: black;
+            box-shadow: 0 5px 20px rgba(77, 134, 156, 0.4);
+            border: 3px solid black;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            z-index: 3000;
+
+        }
+
+        .back:hover {
+            box-shadow: 0 8px 25px rgba(77, 134, 156, 0.5);
+            transform: translateX(3px);
+
+
+        }
+
+          html, body {
+      overflow-x: hidden;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    
+    </style>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+    <div style="background-color: white;">
+
+
+        <div style="background-color: #d5debd;">
+            <header class="py-3">
+                <div class="container">
+                    <a href="./index.html" class="text-decoration-none">
+                    <span class="h3 mb-0 fw-bold" style="color: black;">کافه سبز</span>
+                </a></div>
+        </div>
+         <nav class="navbar navbar-expand-lg navbar-light bg-white align-content-end">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="./menu.html" class="nav-link text-dark">منو</a></li>
+                    <li class="nav-item"><a href="./aboutUs.html" class="nav-link text-dark">درباره</a></li>
+                    <li class="nav-item"><a href="./question.html" class="nav-link text-dark">سوالات متداول</a></li>
+                    <li class="nav-item"><a href="./comments.html" class="nav-link text-dark">نظرات مشتريان</a></li>
+                    <li class="nav-item"><a href="./popular.html" class="nav-link text-dark">پرطرفدارها</a></li>
+                    <li class="nav-item"><a href="./comparison.html" class="nav-link text-dark">مقايسه نوشيدني‌ها</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    </div>
+    </header>
+    </div>
+    <a href="./home.html">
+        <div class="back">برگشت</div>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" style="background-color: #abc270;">
+        <div class="container">
+            <h1 class="hero-title">ماجراجويي طعم‌ها</h1>
+            <p class="hero-subtitle">سفری بي‌نظير در دنيای طعم‌ها و عطرها</p>
+
+        </div>
+    </section>
+
+    <!-- Coffee Section -->
+    <section id="coffee" class="section-spacing">
+        <div class="container">
+            <div class="category-card">
+                <div class="text-center">
+                    <i class="fas fa-coffee category-icon"></i>
+                    <h2 class="category-title">قهوه‌های تخصصي</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                اسپرسو تک
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> دانه قهوه آسياب شده تازه (7 گرم)، آب داغ (25-30 ميلي‌ليتر)
+                                <br><br><strong>طعم:</strong> تلخ، غنی، کرمي با عطر قوی قهوه و لايه کرما طلايي
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                اسپرسو دوبل
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> دانه قهوه آسياب شده تازه (14 گرم)، آب داغ (50-60 ميلي‌ليتر)
+                                <br><br><strong>طعم:</strong> تلخ شديد، بسيار غني و پرقدرت با عمق طعم فوق‌العاده
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-mug-hot"></i>
+                                آمريکانو
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو دوبل، آب داغ (120 ميلي‌ليتر)
+                                <br><br><strong>طعم:</strong> ملايم‌تر از اسپرسو، طعم قهوه محسوس اما کمتر تلخ و قابل
+                                نوشيدن
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+
+                                <i class="fas fa-coffee"></i>
+                                لاته کلاسيک
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو تک، شير بخارپز شده (150 ميلي‌ليتر)، کف شير نرم
+                                <br><br><strong>طعم:</strong> کرمي، شيرين طبيعي، طعم ملايم قهوه با بافت حريری
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                کاپوچينو
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو تک، شير بخارپز (60 ميلي‌ليتر)، کف شير ضخيم، پودر دارچين
+                                <br><br><strong>طعم:</strong> تعادل عالی بين قهوه و شير، کف حجيم و عطر دارچين
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                موکا
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو تک، شکلات داغ، شير بخارپز، خامه زده شده، پودر کاکائو
+                                <br><br><strong>طعم:</strong> شيرين، شکلاتي، کرمي با طعم قهوه و لذت شکلات
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                ماکياتو
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو تک، يک قاشق کف شير، سيروپ کارامل خانگي
+                                <br><br><strong>طعم:</strong> قوی قهوه با لمسي از شيريني و کارامل، طعم متعادل
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                ريسترتو
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> دانه قهوه آسياب ريز (7 گرم)، آب داغ (15 ميلي‌ليتر)
+                                <br><br><strong>طعم:</strong> بسيار غليظ، تلخ شديد، عطر فوق‌العاده قوی و تمرکز بالا
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                فلت وايت
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو دوبل، شير بخارپز (120 ميلي‌ليتر)، کف شير نازک
+                                <br><br><strong>طعم:</strong>قوی‌تر از لاته، کرمي با طعم برجسته قهوه و بافت مخملي
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                لاته وانيلي
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو تک، شير بخارپز، سيروپ وانيل طبيعي، کف شير
+                                <br><br><strong>طعم:</strong> شيرين، عطر وانيل دلنشين، کرمي و آرام‌بخش
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tea Section -->
+    <section id="tea" class="section-spacing">
+        <div class="container">
+            <div class="category-card">
+                <div class="text-center">
+                    <i class="fas fa-leaf category-icon"></i>
+                    <h2 class="category-title">چای و دمنوش‌های طبيعي</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-leaf"></i>
+                                چای سياه کلاسيک
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> برگ چای سياه درجه يک، آب جوش، شکر يا عسل طبيعي
+                                <br><br><strong>طعم:</strong> قوی، کمي تلخ، رنگ قرمز تيره، عطر غني و سنتي
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-seedling"></i>
+                                چای سبز
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> برگ چای سبز، آب داغ (80 درجه)، عسل طبيعي
+                                <br><br><strong>طعم:</strong> ملايم، کمي تلخ، طعم گياهي تازه، آنتي‌اکسيدان بالا
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-pepper-hot"></i>
+                                چای ماسالا هندی
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> چای سياه، شير، هل، دارچين، زنجبيل تازه، ميخک، فلفل سياه، شکر
+                                <br><br><strong>طعم:</strong> ادويه‌ای، گرم، شيرين، عطر قوی ادويه‌های معطر
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-lemon"></i>
+                                چای ترش
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> گل چای ترش (هيبيسکوس)، آب جوش، عسل، ليمو تازه
+                                <br><br><strong>طعم:</strong> ترش طبيعي، رنگ قرمز زيبا، خنک‌کننده، ويتامين C بالا
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-leaf"></i>
+                                چای نعناع
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> برگ نعناع تازه، آب جوش، عسل طبيعي کوهي
+                                <br><br><strong>طعم:</strong> خنک، معطر، آرام‌بخش، هضم‌کننده طبيعي و تازه‌کننده
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-flower"></i>
+                                دمنوش بابونه
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> گل بابونه خشک، آب جوش، عسل طبيعي
+                                <br><br><strong>طعم:</strong> ملايم، شيرين طبيعي، آرام‌بخش، ضد التهاب و مفيد برای خواب
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-flower"></i>
+                                دمنوش گل گاوزبان
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> گل گاوزبان خشک، آب جوش، عسل کوهي
+                                <br><br><strong>طعم:</strong> ملايم، معطر، آرام‌بخش، مفيد برای خواب و تسکين اضطراب
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-leaf"></i>
+                                دمنوش آويشن و عسل
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> آويشن خشک، عسل طبيعي، آب جوش، ليمو تازه
+                                <br><br><strong>طعم:</strong> گياهي، شيرين، ضد سرماخوردگي، تقويت‌کننده سيستم ايمني
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-leaf"></i>
+                                چای اولانگ
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> برگ چای اولانگ نيمه تخميری، آب داغ (90 درجه)
+                                <br><br><strong>طعم:</strong> پيچيده، بين چای سبز و سياه، عطر گلي و طعم منحصربه‌فرد
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-flower"></i>
+                                چای ياس
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> چای سبز، گل ياس، آب داغ، عسل طبيعي
+                                <br><br><strong>طعم:</strong> معطر، گلي، ملايم، آرام‌بخش و لذت‌بخش با عطر بهاری
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cold Drinks Section -->
+    <section id="cold" class="section-spacing">
+        <div class="container">
+            <div class="category-card">
+                <div class="text-center">
+                    <i class="fas fa-glass-whiskey category-icon"></i>
+                    <h2 class="category-title">نوشيدني‌های سرد</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-snowflake"></i>
+                                آيس لاته
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو دوبل، شير سرد، يخ خرد شده، سيروپ وانيل
+                                <br><br><strong>طعم:</strong> خنک، کرمي، طعم قهوه ملايم، منعش و انرژی‌بخش
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-snowflake"></i>
+                                آيس موکا
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو، شکلات سرد، شير يخ، خامه زده شده، يخ خرد شده
+                                <br><br><strong>طعم:</strong> شکلاتي، خنک، شيرين، کرمي و لذيذ با طعم قهوه
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-snowflake"></i>
+                                آيس آمريکانو
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو دوبل، آب سرد، يخ، شربت ساده (اختياری)
+                                <br><br><strong>طعم:</strong> قوی قهوه، خنک، کم کالری، منعش و بدون شير
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-snowflake"></i>
+                                آيس کارامل ماکياتو
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو، شير سرد، سيروپ کارامل خانگی، يخ، خامه
+                                <br><br><strong>طعم:</strong> شيرين، کارامل، خنک، کرمي و دلپذير با لايه‌های زيبا
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-snowflake"></i>
+                                آيس وانيل لاته
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو، شير سرد، سيروپ وانيل طبيعي، يخ، کف شير سرد
+                                <br><br><strong>طعم:</strong> وانيلي، خنک، کرمي، عطر دلنشين و طعم ملايم
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+
+                            <div class="drink-name">
+                                <i class="fas fa-snowflake"></i>
+                                آيس هات چاکلت
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> شکلات تلخ، شير سرد، خامه، يخ، پودر کاکائو
+                                <br><br><strong>طعم:</strong> شکلاتي غني، خنک، کرمي، بدون کافئين و مناسب همه سنين
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-leaf"></i>
+                                آيس چای سبز
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> چای سبز دم‌کرده سرد، يخ، عسل، ليمو تازه، نعناع
+                                <br><br><strong>طعم:</strong> تازه، کمي تلخ، آنتي‌اکسيدان، منعش و سالم
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-lemon"></i>
+                                آيس چای ترش
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> چای ترش سرد، يخ، عسل، ليمو تازه، برگ نعناع
+                                <br><br><strong>طعم:</strong> ترش طبيعی، خنک، قرمز زيبا، ويتامين C و تشنگي‌بر
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-pepper-hot"></i>
+                                آيس چای ماسالا
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> چای ماسالا سرد، شير، يخ، عسل، ادويه‌های معطر
+                                <br><br><strong>طعم:</strong> ادويه‌ای، خنک، شيرين، عطر قوی و طعم منحصربه‌فرد
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-berry"></i>
+                                آيس موکا توت‌فرنگي
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> اسپرسو، شکلات، شير سرد، سيروپ توت‌فرنگي طبيعي، يخ
+                                <br><br><strong>طعم:</strong> شکلاتي، ميوه‌ای، خنک، رنگ صورتي زيبا و طعم تابستاني
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smoothies Section -->
+    <section id="smoothies" class="section-spacing">
+        <div class="container">
+            <div class="category-card">
+                <div class="text-center">
+                    <i class="fas fa-blender category-icon"></i>
+                    <h2 class="category-title">اسموتي و شيک‌های طبيعي</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+
+                                <i class="fas fa-apple-alt"></i>
+                                اسموتي موز و توت‌فرنگي
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> موز رسيده، توت‌فرنگي تازه، شير، عسل طبيعي، يخ
+                                <br><br><strong>طعم:</strong> شيرين طبيعي، کرمي، سرشار از ويتامين، انرژی‌بخش و مقوی
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-seedling"></i>
+                                اسموتي انبه
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> انبه رسيده، شير نارگيل، عسل، يخ، ليمو تازه
+                                <br><br><strong>طعم:</strong> گرمسيری، شيرين، کرمي، عطر انبه، منعش و لذت‌بخش
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-apple-alt"></i>
+                                اسموتي هلو و زردآلو
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> هلو تازه، زردآلو، عسل، يخ
+                                <br><br><strong>طعم:</strong> ملايم، شيرين، کرمي، عطر ميوه‌های تابستاني و طبيعي
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-lemon"></i>
+                                ليموناد کلاسيک
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> آب ليمو تازه، آب، شکر، يخ، برگ نعناع تازه
+                                <br><br><strong>طعم:</strong> ترش و شيرين، خنک، منعش، سرشار از ويتامين C و تشنگي‌بر
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-leaf"></i>
+                                ليموناد نعناع
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> آب ليمو، نعناع تازه، شکر، آب، يخ خرد شده
+                                <br><br><strong>طعم:</strong> ترش، معطر، خنک‌کننده، آرام‌بخش و تازه‌کننده
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-leaf"></i>
+                                موهيتو بدون الکل
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> نعناع تازه، ليمو، شکر، آب سودا، يخ
+                                <br><br><strong>طعم:</strong> تازه، گازدار، معطر، خنک و منعش با حس تابستاني
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-ice-cream"></i>
+                                شيک شکلات
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> بستني وانيل، شير، پودر کاکائو، شکلات، خامه زده شده
+                                <br><br><strong>طعم:</strong> شکلاتي غني، کرمي، سرد، شيرين و لذيذ با بافت حريری
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-ice-cream"></i>
+                                شيک وانيل
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> بستني وانيل، شير، عصاره وانيل، خامه، شکر
+                                <br><br><strong>طعم:</strong> وانيلي، کرمي، شيرين، عطر دلنشين و کلاسيک
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-ice-cream"></i>
+                                شيک کارامل
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> بستني وانيل، شير، سيروپ کارامل، خامه، شکر سوخته
+                                <br><br><strong>طعم:</strong> کارامل، شيرين، کرمي، طعم سوخته لذيذ و دلپذير
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-apple-alt"></i>
+                                آبميوه طبيعي مخلوط
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> پرتقال، سيب، هويج، زنجبيل تازه، عسل، يخ
+                                <br><br><strong>طعم:</strong> طبيعي، شيرين و ترش، سرشار از ويتامين، انرژی‌زا و سالم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desserts Section -->
+    <section id="desserts" class="section-spacing">
+        <div class="container">
+            <div class="category-card">
+                <div class="text-center">
+                    <i class="fas fa-birthday-cake category-icon"></i>
+                    <h2 class="category-title">دسرهای خوشمزه</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-birthday-cake"></i>
+                                کيک شکلاتي
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> آرد، کاکائو، تخم‌مرغ، شکر، کره، شير، بيکينگ پودر
+                                <br><br><strong>طعم:</strong> شکلاتي غني، نرم، مرطوب، شيرين و لذيذ با بافت اسفنجي
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-birthday-cake"></i>
+                                کيک کارامل
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> آرد، تخم‌مرغ، شکر سوخته، کره، شير، وانيل
+                                <br><br><strong>طعم:</strong> کارامل، شيرين، نرم، عطر سوخته دلپذير و طعم منحصربه‌فرد
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-cheese"></i>
+                                چيزکيک کلاسيک
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> پنير خامه‌ای، تخم‌مرغ، شکر، بيسکويت، کره، وانيل
+                                <br><br><strong>طعم:</strong> کرمي، شيرين، غني، بافت نرم و لذيذ با پايه بيسکوييتي
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-coffee"></i>
+                                تيراميسو
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> بيسکوييت ساووياردی، قهوه، ماسکارپونه، تخم‌مرغ، شکر، کاکائو
+                                <br><br><strong>طعم:</strong> قهوه، کرمی، شيرين، بافت لايه‌ای منحصربه‌فرد و ايتاليايي
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-cookie"></i>
+                                ماکارون
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> پودر بادام، شکر پودری، سفيده تخم‌مرغ، رنگ خوراکی، کرم
+                                <br><br><strong>طعم:</strong> شيرين، بادامي، بافت ترد و نرم، رنگارنگ و فرانسوی
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-bread-slice"></i>
+                                کروسان شکلاتي
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> خمير ورقه‌ای، کره، شکلات، تخم‌مرغ، شير
+                                <br><br><strong>طعم:</strong> کره‌ای، شکلاتي، ترد، لايه‌لايه و خوشمزه با بافت ورقه‌ای
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-bread-slice"></i>
+                                کروسان بادام
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> خمير ورقه‌ای، کره، پودر بادام، شکر، تخم‌مرغ
+                                <br><br><strong>طعم:</strong> بادامي، کره‌ای، ترد، عطر بادام، شيرين و معطر
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-square"></i>
+                                براوني شکلاتي
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> شکلات تلخ، کره، تخم‌مرغ، شکر، آرد، گردو
+                                <br><br><strong>طعم:</strong> شکلاتي غليظ، چسبناک، شيرين، گردويي و بسيار غني
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-heart"></i>
+                                موس توت‌فرنگي
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> توت‌فرنگي تازه، خامه، ژلاتين، شکر، وانيل
+                                <br><br><strong>طعم:</strong> ميوه‌ای، کرمي، سبک، شيرين، رنگ صورتي زيبا و تازه
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="drink-item">
+                            <div class="drink-name">
+                                <i class="fas fa-ice-cream"></i>
+                                وافل با بستني
+                            </div>
+                            <div class="drink-ingredients">
+                                <strong>مواد:</strong> خمير وافل، بستني وانيل، عسل، ميوه تازه، خامه زده شده
+                                <br><br><strong>طعم:</strong> ترد، شيرين، سرد، کرمي، ترکيب عالي گرم و سرد با ميوه
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    </div>
+
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
